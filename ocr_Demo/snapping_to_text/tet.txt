@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<htal>
+<head>
+<link rel="stylesheet" type="text/css" href="/static/style.css">
+<script srce"https: //ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery .min. js"></script>
+</head>
+<body>
+<hi>Flask Chatterbot Example</hl>
+<div>
+<div id="chatbox">
+<p class="botText"><span>Hi! I'm Chatterbot.</span></p>
+</div>
+<div id="userInput">
+<input id="textInput” type="text" name="msg" placeholder="Message">
+<input id="buttonInput" type="submit" value="
+</div>
+<script>
+function getBotResponse() (
+var rawlext = ¢("é#textInput™).val();
+var usertml = '<p class="userText"><span>" + rawlext + '</span></p>':
+$("@textInput™).val("");
+$("échatbox") .append(userHtml) ;
+document. getElementByld('userInput’).scrollintoView((block: ‘start’, behavior: ‘smooth'});
+$-get("/get”, { msg: rawlext }).done(function(data) [
+var botHtml = '<p class="botText"><span>' + data + '</span></p>':
+| $("échatbox") .append (botHtml) :
+document .getElementById('userInput').scrollIntoView({block: ‘start’, behavior: 'smooth'});
+ye
+
+ 
+
+}
+$("#textInput") .keypress(function(e) {
+if(e.which == 13) {
+getBotResponse();
+}
