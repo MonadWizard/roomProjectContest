@@ -1,0 +1,4 @@
+import subprocess as sp
+programNlame = “notepad.exe”
+FileName = "tet.txt’
+sp.Popen([programliame, fileName])
